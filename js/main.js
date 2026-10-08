@@ -215,3 +215,47 @@ $(".promo-carousel").owlCarousel({
   dots: true,
   margin: 0,
 });
+
+// top bar text animations
+
+document.addEventListener("DOMContentLoaded", function () {
+  const phrases = [
+    "Serving students from age 5+",
+    "British Council Registered Centre",
+    "Cambridge English Examination Specialists",
+    "Building confidence through English",
+  ];
+
+  const textElement = document.getElementById("tcce-rotating-text");
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeText() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (!deleting) {
+      textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentPhrase.length) {
+        deleting = true;
+        setTimeout(typeText, 2200);
+        return;
+      }
+    } else {
+      textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+
+    setTimeout(typeText, deleting ? 35 : 65);
+  }
+
+  typeText();
+});

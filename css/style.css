@@ -1700,3 +1700,299 @@ textarea {
     align-self: center;
   }
 }
+
+/* =========================================================
+   TCCE MOMENTS / PHOTO COLLECTIONS
+========================================================= */
+
+.tcce-moments-section {
+  padding: 100px 0;
+  background: #f7f8fb;
+}
+
+.tcce-moments-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.tcce-moments-heading h2 {
+  margin: 12px 0 18px;
+}
+
+.tcce-moments-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #737b8f;
+  line-height: 1.8;
+}
+
+/* Collection Card */
+
+.tcce-collection-card {
+  height: 100%;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid rgba(20, 30, 140, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(20, 30, 140, 0.07);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.tcce-collection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(20, 30, 140, 0.11);
+}
+
+/* Collection Header */
+
+.tcce-collection-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 26px 22px;
+}
+
+.tcce-collection-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tcce-collection-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #101a4a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tcce-collection-category {
+  display: block;
+  margin-bottom: 4px;
+  color: #b18a38;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.tcce-collection-top h4 {
+  margin: 0;
+  color: #101a4a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tcce-collection-count {
+  flex-shrink: 0;
+  color: #8a91a3;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Image Layout */
+
+.tcce-media-layout {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 5px;
+  height: 330px;
+  background: #e9ebf1;
+}
+
+.tcce-media-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  min-width: 0;
+}
+
+.tcce-media {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #e4e6ec;
+}
+
+.tcce-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tcce-media:hover img {
+  transform: scale(1.06);
+}
+
+/* Image Overlay */
+
+.tcce-media-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 26, 74, 0);
+  color: #ffffff;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease;
+}
+
+.tcce-media-overlay i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.tcce-media:hover .tcce-media-overlay {
+  opacity: 1;
+  background: rgba(16, 26, 74, 0.38);
+}
+
+/* Collection Footer */
+
+.tcce-collection-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 26px 21px;
+}
+
+.tcce-collection-footer > span {
+  color: #858c9d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.tcce-collection-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  color: #173b8f;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: gap 0.25s ease;
+}
+
+.tcce-collection-link i {
+  font-size: 10px;
+}
+
+.tcce-collection-link:hover {
+  color: #b18a38;
+  gap: 11px;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .tcce-moments-section {
+    padding: 80px 0;
+  }
+
+  .tcce-collection-card {
+    margin-bottom: 30px;
+  }
+
+  .tcce-media-layout {
+    height: 300px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
+  .tcce-moments-section {
+    padding: 70px 0;
+  }
+
+  .tcce-moments-heading {
+    margin-bottom: 35px;
+  }
+
+  .tcce-moments-heading h2 {
+    font-size: 28px;
+  }
+
+  .tcce-moments-heading p {
+    font-size: 14px;
+  }
+
+  .tcce-collection-top {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .tcce-collection-meta {
+    gap: 11px;
+  }
+
+  .tcce-collection-number {
+    width: 32px;
+    height: 32px;
+    font-size: 9px;
+  }
+
+  .tcce-collection-top h4 {
+    font-size: 15px;
+  }
+
+  .tcce-collection-count {
+    display: none;
+  }
+
+  .tcce-media-layout {
+    height: 260px;
+  }
+
+  .tcce-collection-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 17px 20px 20px;
+  }
+
+  .tcce-collection-link {
+    align-self: flex-end;
+  }
+}
+
+/* top bar text animations */
+#tcce-rotating-text {
+  display: inline-block;
+  min-width: 280px;
+}
+
+@media (max-width: 575px) {
+  #tcce-rotating-text {
+    min-width: 0;
+  }
+}
