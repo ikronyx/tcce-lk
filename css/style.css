@@ -325,13 +325,13 @@ textarea {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background:
+  /* background:
     radial-gradient(
       circle at 85% 20%,
       rgba(45, 121, 206, 0.22),
       transparent 30%
     ),
-    linear-gradient(135deg, #06142d, #092854);
+    linear-gradient(135deg, #06142d, #092854); */
 }
 
 .main-banner-secondary {
@@ -355,7 +355,7 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.38;
+  opacity: 0.95;
 }
 
 .main-banner::after {
@@ -364,7 +364,7 @@ textarea {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(5, 19, 43, 0.92) 0%,
+    rgba(5, 19, 43, 0.72) 0%,
     rgba(5, 19, 43, 0.72) 46%,
     rgba(5, 19, 43, 0.28) 100%
   );
