@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The College Of Cambridge English Examinations | Coming Soon</title>
+
+    <meta
+      name="description"
+      content="The College Of Cambridge English Examinations — Your Cambridge English journey begins here."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --navy: #101a4a;
+        --blue: #173b8f;
+        --gold: #d6ae55;
+        --gold-light: #f3d899;
+        --white: #ffffff;
+        --muted: #69728b;
+        --bg: #f7f8fc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        font-family: "Nunito Sans", sans-serif;
+        background: var(--bg);
+        color: var(--navy);
+        overflow-x: hidden;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Decorative background */
+      .page::before {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background: rgba(23, 59, 143, 0.055);
+        top: -260px;
+        right: -180px;
+      }
+
+      .page::after {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: rgba(214, 174, 85, 0.07);
+        bottom: -220px;
+        left: -180px;
+      }
+
+      /* Header */
+      header {
+        position: relative;
+        z-index: 2;
+        padding: 28px 7%;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 13px;
+        text-decoration: none;
+        color: var(--navy);
+      }
+
+      .logo img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+
+      .logo-text strong {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: -0.3px;
+      }
+
+      .logo-text span {
+        margin-top: 5px;
+        font-size: 9px;
+        font-weight: 700;
+        color: var(--blue);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      /* Main */
+      main {
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px 70px;
+      }
+
+      .content {
+        width: min(850px, 100%);
+        text-align: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 8px 15px;
+        border: 1px solid rgba(214, 174, 85, 0.45);
+        border-radius: 100px;
+        color: #9b7626;
+        background: rgba(255, 255, 255, 0.65);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        animation: pulse 1.8s infinite;
+      }
+
+      h1 {
+        font-size: clamp(42px, 7vw, 76px);
+        line-height: 0.98;
+        letter-spacing: -3px;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 25px;
+      }
+
+      h1 span {
+        color: var(--blue);
+      }
+
+      .intro {
+        max-width: 650px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+        font-weight: 400;
+      }
+
+      /* Countdown */
+      .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin: 42px auto 32px;
+      }
+
+      .time-box {
+        width: 105px;
+        padding: 18px 10px 15px;
+        background: var(--white);
+        border: 1px solid rgba(16, 26, 74, 0.08);
+        border-radius: 14px;
+        box-shadow: 0 12px 35px rgba(16, 26, 74, 0.07);
+      }
+
+      .time-box strong {
+        display: block;
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--navy);
+        letter-spacing: -1px;
+      }
+
+      .time-box span {
+        display: block;
+        margin-top: 8px;
+        font-size: 9px;
+        font-weight: 700;
+        color: #8991a5;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+      }
+
+      .launch {
+        font-size: 13px;
+        color: #7a8194;
+        font-weight: 500;
+      }
+
+      .launch strong {
+        color: var(--blue);
+        font-weight: 700;
+      }
+
+      /* Footer */
+      footer {
+        position: relative;
+        z-index: 2;
+        padding: 22px 7%;
+        text-align: center;
+        color: #9299aa;
+        font-size: 11px;
+        letter-spacing: 0.3px;
+      }
+
+      footer span {
+        color: var(--gold);
+        margin: 0 6px;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 0.4;
+          transform: scale(0.7);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        header {
+          padding: 20px 22px;
+        }
+
+        .logo img {
+          width: 48px;
+          height: 48px;
+        }
+
+        .logo-text strong {
+          font-size: 12px;
+        }
+
+        .logo-text span {
+          font-size: 7px;
+          letter-spacing: 1px;
+        }
+
+        main {
+          padding: 35px 20px 45px;
+        }
+
+        h1 {
+          font-size: clamp(42px, 13vw, 58px);
+          letter-spacing: -2px;
+        }
+
+        .intro {
+          font-size: 15px;
+          line-height: 1.7;
+        }
+
+        .countdown {
+          gap: 7px;
+          margin-top: 32px;
+        }
+
+        .time-box {
+          width: 76px;
+          padding: 15px 7px 12px;
+          border-radius: 11px;
+        }
+
+        .time-box strong {
+          font-size: 25px;
+        }
+
+        .time-box span {
+          font-size: 7px;
+          letter-spacing: 1px;
+        }
+
+        .launch {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .time-box {
+          width: 68px;
+        }
+
+        .time-box strong {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header>
+        <a href="#" class="logo">
+          <img src="images/tcce-logo.png" alt="TCCE Logo" />
+
+          <div class="logo-text">
+            <strong>The College Of Cambridge</strong>
+            <span>English Examinations</span>
+          </div>
+        </a>
+      </header>
+
+      <main>
+        <div class="content">
+          <div class="eyebrow">Something exciting is coming</div>
+
+          <h1>
+            Your Cambridge<br />
+            <span>journey begins here.</span>
+          </h1>
+
+          <p class="intro">
+            We are putting the finishing touches on our new digital home. A
+            fresh experience for Cambridge English learners, parents, and
+            educators is almost ready.
+          </p>
+
+          <div class="countdown">
+            <div class="time-box">
+              <strong id="hours">00</strong>
+              <span>Hours</span>
+            </div>
+
+            <div class="time-box">
+              <strong id="minutes">00</strong>
+              <span>Minutes</span>
+            </div>
+
+            <div class="time-box">
+              <strong id="seconds">00</strong>
+              <span>Seconds</span>
+            </div>
+          </div>
+
+          <p class="launch">
+            Official website launch
+            <strong>Today · 5:00 PM Sri Lanka Time</strong>
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        The College Of Cambridge English Examinations
+        <span>•</span>
+        Mirigama · Giriulla · Warakapola
+      </footer>
+    </div>
+
+    <script>
+      function updateCountdown() {
+        const now = new Date();
+
+        const target = new Date();
+        target.setHours(17, 0, 0, 0);
+
+        const difference = target - now;
+
+        if (difference <= 0) {
+          document.getElementById("hours").textContent = "00";
+          document.getElementById("minutes").textContent = "00";
+          document.getElementById("seconds").textContent = "00";
+
+          document.querySelector(".eyebrow").textContent =
+            "We are officially live";
+
+          document.querySelector("h1").innerHTML =
+            "Welcome to your<br><span>Cambridge journey.</span>";
+
+          document.querySelector(".intro").textContent =
+            "Our new website is now live. Explore TCCE, discover our programmes and take the next step towards your Cambridge English qualification.";
+
+          document.querySelector(".launch").innerHTML =
+            "<strong>Website is now live.</strong>";
+
+          return;
+        }
+
+        const hours = Math.floor(difference / (1000 * 60 * 60));
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60),
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0",
+        );
+
+        document.getElementById("minutes").textContent = String(
+          minutes,
+        ).padStart(2, "0");
+
+        document.getElementById("seconds").textContent = String(
+          seconds,
+        ).padStart(2, "0");
+      }
+
+      updateCountdown();
+
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

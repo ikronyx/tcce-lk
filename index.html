@@ -2,443 +2,1561 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>The College Of Cambridge English Examinations | Coming Soon</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <meta
       name="description"
-      content="The College Of Cambridge English Examinations — Your Cambridge English journey begins here."
+      content="The College Of Cambridge English Examinations (TCCE) is an accredited Cambridge English Examination Preparation Centre and British Council Sri Lanka registration centre serving students from age 5 and above."
     />
 
+    <meta
+      name="keywords"
+      content="TCCE, Cambridge English, Cambridge Examinations Sri Lanka, Cambridge Young Learners, Mirigama English classes, Giriulla English classes, Warakapola English classes"
+    />
+
+    <meta
+      name="author"
+      content="The College Of Cambridge English Examinations"
+    />
+
+    <meta
+      property="og:title"
+      content="The College Of Cambridge English Examinations"
+    />
+    <meta
+      property="og:description"
+      content="Cambridge English preparation and examination registration for young learners and school students."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tcce.lk" />
+
+    <title>
+      The College Of Cambridge English Examinations | TCCE Sri Lanka
+    </title>
+
+    <!-- Google Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-      :root {
-        --navy: #101a4a;
-        --blue: #173b8f;
-        --gold: #d6ae55;
-        --gold-light: #f3d899;
-        --white: #ffffff;
-        --muted: #69728b;
-        --bg: #f7f8fc;
-      }
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.css" />
 
-      html,
-      body {
-        min-height: 100%;
-      }
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.css" />
 
-      body {
-        font-family: "Nunito Sans", sans-serif;
-        background: var(--bg);
-        color: var(--navy);
-        overflow-x: hidden;
-      }
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="css/lightbox.css" />
 
-      .page {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        overflow: hidden;
-      }
-
-      /* Decorative background */
-      .page::before {
-        content: "";
-        position: absolute;
-        width: 520px;
-        height: 520px;
-        border-radius: 50%;
-        background: rgba(23, 59, 143, 0.055);
-        top: -260px;
-        right: -180px;
-      }
-
-      .page::after {
-        content: "";
-        position: absolute;
-        width: 420px;
-        height: 420px;
-        border-radius: 50%;
-        background: rgba(214, 174, 85, 0.07);
-        bottom: -220px;
-        left: -180px;
-      }
-
-      /* Header */
-      header {
-        position: relative;
-        z-index: 2;
-        padding: 28px 7%;
-      }
-
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 13px;
-        text-decoration: none;
-        color: var(--navy);
-      }
-
-      .logo img {
-        width: 58px;
-        height: 58px;
-        object-fit: contain;
-      }
-
-      .logo-text {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.15;
-      }
-
-      .logo-text strong {
-        font-size: 15px;
-        font-weight: 800;
-        letter-spacing: -0.3px;
-      }
-
-      .logo-text span {
-        margin-top: 5px;
-        font-size: 9px;
-        font-weight: 700;
-        color: var(--blue);
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-      }
-
-      /* Main */
-      main {
-        position: relative;
-        z-index: 1;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 50px 20px 70px;
-      }
-
-      .content {
-        width: min(850px, 100%);
-        text-align: center;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
-        padding: 8px 15px;
-        border: 1px solid rgba(214, 174, 85, 0.45);
-        border-radius: 100px;
-        color: #9b7626;
-        background: rgba(255, 255, 255, 0.65);
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 1.8px;
-        text-transform: uppercase;
-        margin-bottom: 25px;
-      }
-
-      .eyebrow::before {
-        content: "";
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--gold);
-        animation: pulse 1.8s infinite;
-      }
-
-      h1 {
-        font-size: clamp(42px, 7vw, 76px);
-        line-height: 0.98;
-        letter-spacing: -3px;
-        font-weight: 800;
-        color: var(--navy);
-        margin-bottom: 25px;
-      }
-
-      h1 span {
-        color: var(--blue);
-      }
-
-      .intro {
-        max-width: 650px;
-        margin: 0 auto;
-        color: var(--muted);
-        font-size: 17px;
-        line-height: 1.8;
-        font-weight: 400;
-      }
-
-      /* Countdown */
-      .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        margin: 42px auto 32px;
-      }
-
-      .time-box {
-        width: 105px;
-        padding: 18px 10px 15px;
-        background: var(--white);
-        border: 1px solid rgba(16, 26, 74, 0.08);
-        border-radius: 14px;
-        box-shadow: 0 12px 35px rgba(16, 26, 74, 0.07);
-      }
-
-      .time-box strong {
-        display: block;
-        font-size: 34px;
-        line-height: 1;
-        font-weight: 700;
-        color: var(--navy);
-        letter-spacing: -1px;
-      }
-
-      .time-box span {
-        display: block;
-        margin-top: 8px;
-        font-size: 9px;
-        font-weight: 700;
-        color: #8991a5;
-        text-transform: uppercase;
-        letter-spacing: 1.4px;
-      }
-
-      .launch {
-        font-size: 13px;
-        color: #7a8194;
-        font-weight: 500;
-      }
-
-      .launch strong {
-        color: var(--blue);
-        font-weight: 700;
-      }
-
-      /* Footer */
-      footer {
-        position: relative;
-        z-index: 2;
-        padding: 22px 7%;
-        text-align: center;
-        color: #9299aa;
-        font-size: 11px;
-        letter-spacing: 0.3px;
-      }
-
-      footer span {
-        color: var(--gold);
-        margin: 0 6px;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-
-        50% {
-          opacity: 0.4;
-          transform: scale(0.7);
-        }
-      }
-
-      /* Mobile */
-      @media (max-width: 600px) {
-        header {
-          padding: 20px 22px;
-        }
-
-        .logo img {
-          width: 48px;
-          height: 48px;
-        }
-
-        .logo-text strong {
-          font-size: 12px;
-        }
-
-        .logo-text span {
-          font-size: 7px;
-          letter-spacing: 1px;
-        }
-
-        main {
-          padding: 35px 20px 45px;
-        }
-
-        h1 {
-          font-size: clamp(42px, 13vw, 58px);
-          letter-spacing: -2px;
-        }
-
-        .intro {
-          font-size: 15px;
-          line-height: 1.7;
-        }
-
-        .countdown {
-          gap: 7px;
-          margin-top: 32px;
-        }
-
-        .time-box {
-          width: 76px;
-          padding: 15px 7px 12px;
-          border-radius: 11px;
-        }
-
-        .time-box strong {
-          font-size: 25px;
-        }
-
-        .time-box span {
-          font-size: 7px;
-          letter-spacing: 1px;
-        }
-
-        .launch {
-          font-size: 11px;
-        }
-      }
-
-      @media (max-width: 360px) {
-        .time-box {
-          width: 68px;
-        }
-
-        .time-box strong {
-          font-size: 22px;
-        }
-      }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div class="page">
-      <header>
-        <a href="#" class="logo">
-          <img src="images/tcce-logo.png" alt="TCCE Logo" />
+    <!-- =========================================================
+     TOP BAR
+========================================================= -->
 
-          <div class="logo-text">
-            <strong>The College Of Cambridge</strong>
-            <span>English Examinations</span>
-          </div>
-        </a>
-      </header>
-
-      <main>
-        <div class="content">
-          <div class="eyebrow">Something exciting is coming</div>
-
-          <h1>
-            Your Cambridge<br />
-            <span>journey begins here.</span>
-          </h1>
-
-          <p class="intro">
-            We are putting the finishing touches on our new digital home. A
-            fresh experience for Cambridge English learners, parents, and
-            educators is almost ready.
-          </p>
-
-          <div class="countdown">
-            <div class="time-box">
-              <strong id="hours">00</strong>
-              <span>Hours</span>
-            </div>
-
-            <div class="time-box">
-              <strong id="minutes">00</strong>
-              <span>Minutes</span>
-            </div>
-
-            <div class="time-box">
-              <strong id="seconds">00</strong>
-              <span>Seconds</span>
+    <div class="sub-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 col-sm-8">
+            <div class="left-content">
+              <p></p>
+              <p>
+                <strong>TCCE</strong>
+                &nbsp;|&nbsp;
+                <span id="tcce-rotating-text"
+                  >Serving students from age 5+</span
+                >
+              </p>
             </div>
           </div>
 
-          <p class="launch">
-            Official website launch
-            <strong>Today · 5:00 PM Sri Lanka Time</strong>
-          </p>
+          <div class="col-lg-4 col-sm-4">
+            <div class="right-icons">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/p/The-College-Of-Cambridge-English-Examinations-100087502778471/"
+                    target="_blank"
+                    aria-label="Facebook"
+                  >
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/94753653358"
+                    target="_blank"
+                    aria-label="WhatsApp"
+                  >
+                    <i class="fa fa-whatsapp"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="mailto:info@tcce.lk" aria-label="Email">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer>
-        The College Of Cambridge English Examinations
-        <span>•</span>
-        Mirigama · Giriulla · Warakapola
-      </footer>
+      </div>
     </div>
 
-    <script>
-      function updateCountdown() {
-        const now = new Date();
+    <!-- =========================================================
+     HEADER
+========================================================= -->
 
-        const target = new Date();
-        target.setHours(17, 0, 0, 0);
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <a href="#top" class="logo">
+                <img src="images/tcce-logo.png" alt="TCCE Logo" />
 
-        const difference = target - now;
+                <span class="logo-text">
+                  <strong>The College Of Cambridge</strong>
+                  <span>English Examinations</span>
+                </span>
+              </a>
 
-        if (difference <= 0) {
-          document.getElementById("hours").textContent = "00";
-          document.getElementById("minutes").textContent = "00";
-          document.getElementById("seconds").textContent = "00";
+              <ul class="nav">
+                <li>
+                  <a href="#top" class="active">Home</a>
+                </li>
 
-          document.querySelector(".eyebrow").textContent =
-            "We are officially live";
+                <li>
+                  <a href="#about">About</a>
+                </li>
 
-          document.querySelector("h1").innerHTML =
-            "Welcome to your<br><span>Cambridge journey.</span>";
+                <li>
+                  <a href="#programs">Programs</a>
+                </li>
 
-          document.querySelector(".intro").textContent =
-            "Our new website is now live. Explore TCCE, discover our programmes and take the next step towards your Cambridge English qualification.";
+                <li>
+                  <a href="#examinations">Examinations</a>
+                </li>
 
-          document.querySelector(".launch").innerHTML =
-            "<strong>Website is now live.</strong>";
+                <li>
+                  <a href="#gallery">Gallery</a>
+                </li>
 
-          return;
-        }
+                <li>
+                  <a href="event-news.html">Events & News</a>
+                </li>
 
-        const hours = Math.floor(difference / (1000 * 60 * 60));
-        const minutes = Math.floor(
-          (difference % (1000 * 60 * 60)) / (1000 * 60),
-        );
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
 
-        document.getElementById("hours").textContent = String(hours).padStart(
-          2,
-          "0",
-        );
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
 
-        document.getElementById("minutes").textContent = String(
-          minutes,
-        ).padStart(2, "0");
+    <!-- =========================================================
+     HERO
+========================================================= -->
 
-        document.getElementById("seconds").textContent = String(
-          seconds,
-        ).padStart(2, "0");
-      }
+    <section class="section main-banner" id="top" data-section="top">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="media/course-video.mp4" type="video/mp4" />
+      </video>
 
-      updateCountdown();
+      <div class="video-overlay header-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="caption">
+                <div class="hero-badge">
+                  <i class="fa fa-certificate"></i>
+                  British Council Registered
+                </div>
 
-      setInterval(updateCountdown, 1000);
-    </script>
+                <h6>
+                  Accredited Cambridge English Examination Preparation Centre
+                </h6>
+
+                <h2>
+                  Dream Big.<br />
+                  <span>Learn with Purpose.</span>
+                </h2>
+
+                <p>
+                  The College Of Cambridge English Examinations (TCCE) helps
+                  young learners and school students build confident,
+                  internationally recognised English communication skills
+                  through structured Cambridge English preparation.
+                </p>
+
+                <div class="hero-buttons">
+                  <a href="#programs" class="primary-btn">
+                    Explore Programmes
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+
+                  <a
+                    href="https://wa.me/94753653358"
+                    target="_blank"
+                    class="secondary-btn"
+                  >
+                    <i class="fa fa-whatsapp"></i>
+                    WhatsApp Us
+                  </a>
+                </div>
+
+                <div class="hero-meta">
+                  <div class="hero-meta-item">
+                    <i class="fa fa-child"></i>
+                    Age 5+
+                  </div>
+
+                  <div class="hero-meta-item">
+                    <i class="fa fa-graduation-cap"></i>
+                    Cambridge English Programmes
+                  </div>
+
+                  <div class="hero-meta-item">
+                    <i class="fa fa-map-marker"></i>
+                    Mirigama · Giriulla · Warakapola
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     FEATURE STRIP
+========================================================= -->
+
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="owl-service-item owl-carousel">
+              <div class="item">
+                <div class="icon">
+                  <i class="fa fa-child"></i>
+                </div>
+
+                <div class="down-content">
+                  <h4>Young Learners</h4>
+
+                  <p>
+                    Specially designed preparation for children beginning their
+                    Cambridge English journey from age 5.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">
+                  <i class="fa fa-comments"></i>
+                </div>
+
+                <div class="down-content">
+                  <h4>Four-Skill Development</h4>
+
+                  <p>
+                    Reading, writing, listening and speaking developed together
+                    for real communication confidence.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">
+                  <i class="fa fa-certificate"></i>
+                </div>
+
+                <div class="down-content">
+                  <h4>Cambridge Preparation</h4>
+
+                  <p>
+                    Structured preparation aligned with Cambridge English
+                    qualifications and CEFR proficiency levels.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">
+                  <i class="fa fa-search"></i>
+                </div>
+
+                <div class="down-content">
+                  <h4>Placement Testing</h4>
+
+                  <p>
+                    A benchmark assessment helps identify the most suitable
+                    starting level before joining a programme.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+
+                <div class="down-content">
+                  <h4>Three Main Locations</h4>
+
+                  <p>
+                    Students can access TCCE programmes across Mirigama,
+                    Giriulla and Warakapola.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     PROGRAMS
+========================================================= -->
+
+    <section class="upcoming-meetings" id="programs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading center-heading">
+              <div class="eyebrow">Our Programmes</div>
+
+              <h2>Build the right English foundation.</h2>
+
+              <p>
+                From a child's first English qualification to higher-level
+                Cambridge examinations, TCCE provides structured preparation for
+                every stage of the journey.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="categories">
+              <h4>Learning Pathways</h4>
+
+              <ul>
+                <li>
+                  <a href="#examinations">Young Learners English</a>
+                </li>
+
+                <li>
+                  <a href="#examinations">A2 Key for Schools</a>
+                </li>
+
+                <li>
+                  <a href="#examinations">B1 Preliminary for Schools</a>
+                </li>
+
+                <li>
+                  <a href="#examinations">B2 First</a>
+                </li>
+
+                <li>
+                  <a href="#contact">Placement Testing</a>
+                </li>
+              </ul>
+
+              <div class="main-button-yellow">
+                <a href="#contact"> Enquire About Classes </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6 mb-4">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>Programme</span>
+                    </div>
+
+                    <img
+                      src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85"
+                      alt="Young learners in an English classroom"
+                    />
+                  </div>
+
+                  <div class="down-content">
+                    <div class="date">
+                      <h6>
+                        Age
+                        <span>5+</span>
+                      </h6>
+                    </div>
+
+                    <a href="#examinations">
+                      <h4>Cambridge Young Learners</h4>
+                    </a>
+
+                    <p>
+                      A child-friendly pathway through Starters, Movers and
+                      Flyers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mb-4">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>Programme</span>
+                    </div>
+
+                    <img
+                      src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+                      alt="Students studying together"
+                    />
+                  </div>
+
+                  <div class="down-content">
+                    <div class="date">
+                      <h6>
+                        Level
+                        <span>A2</span>
+                      </h6>
+                    </div>
+
+                    <a href="#examinations">
+                      <h4>Key for Schools</h4>
+                    </a>
+
+                    <p>
+                      Build everyday English communication and examination
+                      confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mb-4">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>Programme</span>
+                    </div>
+
+                    <img
+                      src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=85"
+                      alt="Students learning in a modern classroom"
+                    />
+                  </div>
+
+                  <div class="down-content">
+                    <div class="date">
+                      <h6>
+                        Level
+                        <span>B1</span>
+                      </h6>
+                    </div>
+
+                    <a href="#examinations">
+                      <h4>Preliminary for Schools</h4>
+                    </a>
+
+                    <p>
+                      Develop stronger speaking, reading, listening and writing
+                      ability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mb-4">
+                <div class="meeting-item">
+                  <div class="thumb">
+                    <div class="price">
+                      <span>Programme</span>
+                    </div>
+
+                    <img
+                      src="https://images.unsplash.com/photo-1498079022511-d15614cb1c02?auto=format&fit=crop&w=900&q=85"
+                      alt="Student preparing for an English examination"
+                    />
+                  </div>
+
+                  <div class="down-content">
+                    <div class="date">
+                      <h6>
+                        Level
+                        <span>B2</span>
+                      </h6>
+                    </div>
+
+                    <a href="#examinations">
+                      <h4>First Certificate</h4>
+                    </a>
+
+                    <p>
+                      Advanced preparation for confident, internationally
+                      recognised English.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     ABOUT / WHY TCCE
+========================================================= -->
+
+    <section class="apply-now" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <div class="section-heading">
+              <div class="eyebrow">About TCCE</div>
+
+              <h2>A stronger foundation for a global future.</h2>
+
+              <p>
+                The College Of Cambridge English Examinations (TCCE) is an
+                accredited Cambridge English Examination Preparation Centre and
+                a registered British Council Sri Lanka registration centre
+                serving learners across the surrounding regions.
+              </p>
+            </div>
+
+            <div class="item">
+              <h3>More than exam preparation.</h3>
+
+              <p>
+                TCCE focuses on building practical communication ability,
+                learner confidence and examination readiness through engaging
+                and structured English education.
+              </p>
+
+              <div class="about-highlight">
+                <div class="highlight-box">
+                  <strong>Cambridge Focused</strong>
+                  <span
+                    >Preparation aligned with recognised Cambridge
+                    pathways.</span
+                  >
+                </div>
+
+                <div class="highlight-box">
+                  <strong>Age 5+</strong>
+                  <span
+                    >Programmes designed for young learners and school
+                    students.</span
+                  >
+                </div>
+
+                <div class="highlight-box">
+                  <strong>Three Locations</strong>
+                  <span>Mirigama, Giriulla and Warakapola.</span>
+                </div>
+
+                <div class="highlight-box">
+                  <strong>Placement Testing</strong>
+                  <span>Find the right starting level before enrolling.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <h3>Recognition that matters.</h3>
+
+              <p>
+                TCCE has been recognised at a British Council national awards
+                ceremony with a High Achiever Certificate in appreciation of
+                achieving the highest regional candidate registrations for
+                Cambridge English examinations.
+              </p>
+
+              <div class="main-button-red">
+                <a href="#contact"> Speak With TCCE </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="accordions is-first-expanded">
+              <article class="accordion is-open">
+                <div class="accordion-head">
+                  <span>Why choose TCCE?</span>
+
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </div>
+
+                <div class="accordion-body" style="display: block">
+                  <div class="content">
+                    <p>
+                      TCCE combines Cambridge-focused preparation with
+                      learner-friendly teaching approaches designed to make
+                      English more enjoyable, practical and confidence-building.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="accordion">
+                <div class="accordion-head">
+                  <span> What skills are developed? </span>
+
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </div>
+
+                <div class="accordion-body">
+                  <div class="content">
+                    <p>
+                      Learners work across Reading, Writing, Listening and
+                      Speaking, with activities structured around their
+                      Cambridge level and learning stage.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="accordion">
+                <div class="accordion-head">
+                  <span> Where does TCCE operate? </span>
+
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </div>
+
+                <div class="accordion-body">
+                  <div class="content">
+                    <p>
+                      TCCE serves learners through its main locations in
+                      Mirigama, Giriulla and Warakapola.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="accordion last-accordion">
+                <div class="accordion-head">
+                  <span> Can new students take a placement test? </span>
+
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </div>
+
+                <div class="accordion-body">
+                  <div class="content">
+                    <p>
+                      Yes. Prospective students can complete a placement
+                      assessment to help identify an appropriate benchmark level
+                      before joining a programme.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     EXAMINATIONS
+========================================================= -->
+
+    <section class="our-courses" id="examinations">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading center-heading">
+              <div class="eyebrow">Cambridge Pathways</div>
+
+              <h2>Recognised qualifications. Real progress.</h2>
+
+              <p>
+                Explore the Cambridge English examinations and preparation
+                pathways available through TCCE.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="owl-courses-item owl-carousel">
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
+                  alt="Cambridge Young Learners Starters"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> Young Learners </span>
+
+                  <h4>Cambridge YLE · Starters</h4>
+
+                  <p class="course-description">
+                    A friendly first step into Cambridge English assessment for
+                    younger learners.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1000&q=85"
+                  alt="Cambridge Young Learners Movers"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> Young Learners </span>
+
+                  <h4>Cambridge YLE · Movers</h4>
+
+                  <p class="course-description">
+                    Continue building confidence across all four English skills.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
+                  alt="Cambridge Young Learners Flyers"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> Young Learners </span>
+
+                  <h4>Cambridge YLE · Flyers</h4>
+
+                  <p class="course-description">
+                    A stronger challenge towards the next Cambridge level.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=85"
+                  alt="Cambridge A2 Key for Schools"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> A2 </span>
+
+                  <h4>A2 Key for Schools</h4>
+
+                  <p class="course-description">
+                    Practical English skills for everyday communication and
+                    school-age learners.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=85"
+                  alt="Cambridge B1 Preliminary for Schools"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> B1 </span>
+
+                  <h4>B1 Preliminary for Schools</h4>
+
+                  <p class="course-description">
+                    Intermediate English development with focused examination
+                    preparation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=85"
+                  alt="Cambridge B2 First"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> B2 </span>
+
+                  <h4>B2 First</h4>
+
+                  <p class="course-description">
+                    Advanced English preparation for stronger independent
+                    communication.
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+                  alt="English placement test"
+                />
+
+                <div class="down-content">
+                  <span class="course-tag"> Assessment </span>
+
+                  <h4>Placement Testing</h4>
+
+                  <p class="course-description">
+                    Identify a suitable starting level before beginning a TCCE
+                    programme.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     GALLERY
+========================================================= -->
+
+    <section class="tcce-moments-section" id="tcce-moments">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tcce-moments-heading">
+              <div class="eyebrow">TCCE Life</div>
+
+              <h2>Moments that make us who we are.</h2>
+
+              <p>
+                From competitions and performances to celebrations and student
+                activities, discover a glimpse of life at The College Of
+                Cambridge English Examinations.
+              </p>
+            </div>
+          </div>
+
+          <!-- =========================================================
+           COLLECTION 01
+      ========================================================== -->
+
+          <div class="col-lg-6">
+            <article class="tcce-collection-card">
+              <div class="tcce-collection-top">
+                <div class="tcce-collection-meta">
+                  <span class="tcce-collection-number">01</span>
+
+                  <div>
+                    <span class="tcce-collection-category">
+                      Events &amp; Celebrations
+                    </span>
+
+                    <h4>Competitions &amp; Achievements</h4>
+                  </div>
+                </div>
+
+                <span class="tcce-collection-count"> 04 Photos </span>
+              </div>
+
+              <div class="tcce-media-layout tcce-achievements">
+                <a
+                  href="images/img-achive-1.jpg"
+                  data-lightbox="tcce-achievements"
+                  class="tcce-media tcce-media-featured"
+                >
+                  <img
+                    src="images/img-achive-1.jpg"
+                    alt="TCCE student competition"
+                  />
+
+                  <span class="tcce-media-overlay">
+                    <i class="fa fa-expand"></i>
+                  </span>
+                </a>
+
+                <div class="tcce-media-stack">
+                  <a
+                    href="images/img-achive-2.jpg"
+                    data-lightbox="tcce-achievements"
+                    class="tcce-media"
+                  >
+                    <img
+                      src="images/img-achive-2.jpg"
+                      alt="TCCE students working together"
+                    />
+
+                    <span class="tcce-media-overlay">
+                      <i class="fa fa-expand"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="images/img-achive-3.jpg"
+                    data-lightbox="tcce-achievements"
+                    class="tcce-media"
+                  >
+                    <img
+                      src="images/img-achive-3.jpg"
+                      alt="TCCE student activity"
+                    />
+
+                    <span class="tcce-media-overlay">
+                      <i class="fa fa-expand"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="images/img-achive-4.jpg"
+                    data-lightbox="tcce-achievements"
+                    class="tcce-media"
+                  >
+                    <img
+                      src="images/img-achive-4.jpg"
+                      alt="TCCE student activity"
+                    />
+
+                    <span class="tcce-media-overlay">
+                      <i class="fa fa-expand"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="tcce-collection-footer">
+                <span>
+                  Celebrating confidence, creativity &amp; achievement
+                </span>
+
+                <a
+                  href="https://www.facebook.com/p/The-College-Of-Cambridge-English-Examinations-100087502778471/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="tcce-collection-link"
+                >
+                  View Collection
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- =========================================================
+           COLLECTION 02
+      ========================================================== -->
+
+          <div class="col-lg-6">
+            <article class="tcce-collection-card">
+              <div class="tcce-collection-top">
+                <div class="tcce-collection-meta">
+                  <span class="tcce-collection-number">02</span>
+
+                  <div>
+                    <span class="tcce-collection-category"> Student Life </span>
+
+                    <h4>Concerts &amp; Special Events</h4>
+                  </div>
+                </div>
+
+                <span class="tcce-collection-count"> 04 Photos </span>
+              </div>
+
+              <div class="tcce-media-layout tcce-events">
+                <a
+                  href="images/img-con-1 (1).jpg"
+                  data-lightbox="tcce-events"
+                  class="tcce-media tcce-media-featured"
+                >
+                  <img
+                    src="images/img-con-1 (1).jpg"
+                    alt="Student concert performance"
+                  />
+
+                  <span class="tcce-media-overlay">
+                    <i class="fa fa-expand"></i>
+                  </span>
+                </a>
+
+                <div class="tcce-media-stack">
+                  <a
+                    href="images/img-con-1 (2).jpg"
+                    data-lightbox="tcce-events"
+                    class="tcce-media"
+                  >
+                    <img
+                      src="images/img-con-1 (2).jpg"
+                      alt="TCCE event performance"
+                    />
+
+                    <span class="tcce-media-overlay">
+                      <i class="fa fa-expand"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="images/img-con-1 (3).jpg"
+                    data-lightbox="tcce-events"
+                    class="tcce-media"
+                  >
+                    <img
+                      src="images/img-con-1 (3).jpg"
+                      alt="TCCE live student event"
+                    />
+
+                    <span class="tcce-media-overlay">
+                      <i class="fa fa-expand"></i>
+                    </span>
+                  </a>
+
+                  <a
+                    href="images/img-con-1 (4).jpg"
+                    data-lightbox="tcce-events"
+                    class="tcce-media"
+                  >
+                    <img
+                      src="images/img-con-1 (4).jpg"
+                      alt="TCCE live student event"
+                    />
+
+                    <span class="tcce-media-overlay">
+                      <i class="fa fa-expand"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="tcce-collection-footer">
+                <span>
+                  Learning, performing &amp; creating memories together
+                </span>
+
+                <a
+                  href="https://www.facebook.com/p/The-College-Of-Cambridge-English-Examinations-100087502778471/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="tcce-collection-link"
+                >
+                  View Collection
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     FACEBOOK PROMOTIONS
+========================================================= -->
+
+    <section class="facebook-promo">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading center-heading">
+              <div class="eyebrow" style="color: #f3d899">For You</div>
+
+              <h2>Find the path of your future.</h2>
+
+              <p>
+                Explore our latest programmes, registrations and opportunities
+                designed to help you build the skills for your next step.
+              </p>
+            </div>
+          </div>
+
+          <!-- =========================================================
+           TILE 01
+      ========================================================= -->
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="promo-card">
+              <div class="promo-card-image">
+                <img
+                  src="images/for-you-1.jpg"
+                  alt="English Teacher Training Course TKT"
+                />
+              </div>
+
+              <div class="promo-card-content">
+                <div class="promo-badge">
+                  <i class="fa fa-graduation-cap"></i>
+                  New Programme
+                </div>
+
+                <h4>English Teacher Training Course · TKT</h4>
+
+                <p>
+                  Take your English and teaching skills to the next level with
+                  our 6-month English Teacher Training Course designed for
+                  aspiring and developing English teachers.
+                </p>
+
+                <p><strong>Duration:</strong> 6 Months</p>
+
+                <p>
+                  <strong>After A/L:</strong> Spoken English · 3 Months · CEFR
+                  B1/B2
+                </p>
+
+                <p>
+                  <strong>Find the path of your future.</strong>
+                </p>
+
+                <a
+                  class="facebook-button"
+                  href="https://wa.me/94753653358?text=Hi%20TCCE%2C%20I%20am%20interested%20in%20the%20English%20Teacher%20Training%20Course%20TKT."
+                  target="_blank"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- =========================================================
+           TILE 02
+      ========================================================= -->
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="promo-card">
+              <div class="promo-card-image">
+                <img
+                  src="images/for-you-2.jpg"
+                  alt="2026 Cambridge English Assessment registrations"
+                />
+              </div>
+
+              <div class="promo-card-content">
+                <div class="promo-badge">
+                  <i class="fa fa-certificate"></i>
+                  2026 Registrations
+                </div>
+
+                <h4>2026 Cambridge English Assessment</h4>
+
+                <p>
+                  <strong>New Registrations Now Open!</strong>
+                </p>
+
+                <p>
+                  Give your child the perfect start with Cambridge English
+                  programmes from age 5 and above.
+                </p>
+
+                <p>
+                  We make learning English fun, engaging, and effective with
+                  proven teaching methods that build confidence and skills for
+                  life.
+                </p>
+
+                <a
+                  class="facebook-button"
+                  href="https://wa.me/94753653358?text=Hi%20TCCE%2C%20I%20would%20like%20to%20register%20for%20the%202026%20Cambridge%20English%20Assessment."
+                  target="_blank"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- =========================================================
+           TILE 03
+      ========================================================= -->
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="promo-card">
+              <div class="promo-card-image">
+                <img
+                  src="images/for-you-3.jpg"
+                  alt="Cambridge Exam Specialist"
+                />
+              </div>
+
+              <div class="promo-card-content">
+                <div class="promo-badge">
+                  <i class="fa fa-star"></i>
+                  Cambridge Exam Specialist
+                </div>
+
+                <h4>Cambridge Exam Specialist</h4>
+
+                <p>Over 10 years teaching FCE, CAE and CPE</p>
+
+                <p>Free grammar hacks &amp; speaking drills</p>
+
+                <p>Join my next masterclass!</p>
+
+                <p>Unlock Cambridge Success</p>
+
+                <a
+                  class="facebook-button"
+                  href="https://wa.me/94753653358?text=Hi%20TCCE%2C%20I%20am%20interested%20in%20the%20Cambridge%20Exam%20Specialist%20masterclass."
+                  target="_blank"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     FACTS / ACHIEVEMENT
+========================================================= -->
+
+    <section class="our-facts">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="facts-intro">
+              <div class="section-heading">
+                <div class="eyebrow">At a Glance</div>
+
+                <h2>Learning with confidence, one step at a time.</h2>
+              </div>
+
+              <p>
+                TCCE is designed around a simple idea: meaningful English
+                education should build both ability and confidence. From the
+                first Cambridge level to more advanced qualifications, learners
+                receive focused guidance at every stage.
+              </p>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">5+</div>
+
+                  <div class="count-title">Starting age</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">3</div>
+
+                  <div class="count-title">Main locations</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">4</div>
+
+                  <div class="count-title">Core English skills</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="count-area-content">
+                  <div class="count-digit">B2</div>
+
+                  <div class="count-title">Advanced pathway</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 align-self-center">
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fa fa-trophy"></i>
+              </div>
+
+              <h3>A journey built around achievement.</h3>
+
+              <p>
+                TCCE combines exam-focused preparation with learner development,
+                creating an environment where students can grow in skill,
+                confidence and ambition.
+              </p>
+
+              <div class="achievement-points">
+                <div class="achievement-point">
+                  <i class="fa fa-check-circle"></i>
+                  <span>Cambridge English focused preparation</span>
+                </div>
+
+                <div class="achievement-point">
+                  <i class="fa fa-check-circle"></i>
+                  <span>Programmes beginning from age 5</span>
+                </div>
+
+                <div class="achievement-point">
+                  <i class="fa fa-check-circle"></i>
+                  <span>Reading, Writing, Listening and Speaking</span>
+                </div>
+
+                <div class="achievement-point">
+                  <i class="fa fa-check-circle"></i>
+                  <span>Placement testing for new learners</span>
+                </div>
+
+                <div class="achievement-point">
+                  <i class="fa fa-check-circle"></i>
+                  <span>British Council Sri Lanka registration centre</span>
+                </div>
+
+                <div class="achievement-point">
+                  <i class="fa fa-check-circle"></i>
+                  <span>Recognised regional registration achievement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     CONTACT
+========================================================= -->
+
+    <section class="contact-us" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading center-heading">
+              <div class="eyebrow" style="color: #f3d899">Contact TCCE</div>
+
+              <h2>Let's plan the next step.</h2>
+
+              <p>
+                Contact us for programme details, placement testing, class
+                information or Cambridge examination registration.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8 align-self-center">
+            <div class="contact-card">
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input
+                        name="name"
+                        type="text"
+                        id="name"
+                        placeholder="YOUR NAME"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input
+                        name="email"
+                        type="email"
+                        id="email"
+                        placeholder="YOUR EMAIL"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input
+                        name="phone"
+                        type="text"
+                        id="phone"
+                        placeholder="PHONE / WHATSAPP"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input
+                        name="subject"
+                        type="text"
+                        id="subject"
+                        placeholder="SUBJECT"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="TELL US WHAT YOU WOULD LIKE TO KNOW..."
+                        required
+                      ></textarea>
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">
+                        SEND ENQUIRY
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="right-info">
+              <ul>
+                <li>
+                  <h6>Phone / WhatsApp</h6>
+
+                  <span> +94 75 365 3358 </span>
+                </li>
+
+                <li>
+                  <h6>Email Address</h6>
+
+                  <a href="mailto:info@tcce.lk"> info@tcce.lk </a>
+
+                  <br />
+
+                  <a href="mailto:tcceinfor9@gmail.com">
+                    tcceinfor9@gmail.com
+                  </a>
+                </li>
+
+                <li>
+                  <h6>Address</h6>
+
+                  <span>
+                    No : 69/A/71 First Floor,<br />
+                    Giriulla Road,<br />
+                    Mirigama, Sri Lanka 11200<br />
+                    <i>Opposite RDB Bank</i>
+                  </span>
+                </li>
+
+                <li>
+                  <h6>Branches</h6>
+
+                  <span> Mirigama · Giriulla · Warakapola </span>
+                </li>
+              </ul>
+
+              <div class="quick-contact-buttons">
+                <a
+                  class="whatsapp-btn"
+                  href="https://wa.me/94753653358"
+                  target="_blank"
+                >
+                  <i class="fa fa-whatsapp"></i>
+                  WhatsApp
+                </a>
+
+                <a class="call-btn" href="tel:+94753653358">
+                  <i class="fa fa-phone"></i>
+                  Call
+                </a>
+
+                <a
+                  class="facebook-btn"
+                  href="https://www.facebook.com/p/The-College-Of-Cambridge-English-Examinations-100087502778471/"
+                  target="_blank"
+                >
+                  <i class="fa fa-facebook"></i>
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+          <p>
+            © 2026 The College Of Cambridge English Examinations (TCCE). All
+            Rights Reserved.
+            <br />
+            Cambridge English Preparation & Examination Registration · Sri Lanka
+            | Design by
+            <a href="https://ikronyx.com" target="_blank"> iKronyx</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     FLOATING FACEBOOK PROMOTION
+========================================================= -->
+
+    <div class="floating-promo" id="floatingPromo">
+      <div class="floating-promo-image">
+        <img src="images/fb-post.jpg" alt="TCCE promotion" />
+
+        <button
+          class="promo-close"
+          id="promoClose"
+          aria-label="Close promotion"
+        >
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+
+      <div class="floating-promo-content">
+        <small> TCCE Facebook Update </small>
+
+        <h4>𝐀/𝐋 𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞𝐝? 𝐘𝐨𝐮𝐫 𝐓𝐞𝐚𝐜𝐡𝐢𝐧𝐠 𝐉𝐨𝐮𝐫𝐧𝐞𝐲 𝐒𝐭𝐚𝐫𝐭𝐬 𝐇𝐞𝐫𝐞</h4>
+
+        <p>Admission are now open for TKT English Techer Training Course</p>
+
+        <a
+          href="https://www.facebook.com/p/The-College-Of-Cambridge-English-Examinations-100087502778471/"
+          target="_blank"
+        >
+          See the latest post
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
