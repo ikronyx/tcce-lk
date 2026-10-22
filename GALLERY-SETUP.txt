@@ -1,0 +1,27 @@
+TCCE website – Gallery installation notes
+=========================================
+
+The ZIP provided for editing contained the advert images but NOT the files in
+images/gallery/ca, images/gallery/cel, or images/gallery/hah.
+
+Before publishing, copy the complete folders from your laptop into:
+
+    images/gallery/ca/
+    images/gallery/cel/
+    images/gallery/hah/
+
+Keep ALL filenames unchanged, including spaces in the 'cel' folder.
+The website is already configured for the exact 37 + 13 + 7 images you listed.
+
+Until the photos are copied, album previews show neutral placeholders and the
+modal explains why the selected photo is missing. This is intentional, not a
+broken external image or spinner. The eight adverts have been converted from
+WebP to JPG and their image/link URLs updated; the originals are retained.
+
+Gallery controls: click album, use previous/next arrows, arrow keys, touch
+swipes on mobile, or small thumbnail strip, and close with Escape or X.
+All interactions are implemented locally with js/tcce-gallery.js, no CDN,
+third-party dependency, or Internet connection needed.
+
+Check by opening index.html or serving the entire folder on a normal web host.
+Do NOT upload just index.html: upload css, js, images, and media directories too.

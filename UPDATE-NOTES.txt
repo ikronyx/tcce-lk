@@ -1,0 +1,18 @@
+TCCE HOMEPAGE UPDATE
+
+Upload index.html, css/revamp.css and the images/adverts folder to the matching locations on your hosting account. The complete website is included in this archive.
+
+Changes: prominent accreditation, British Council Sri Lanka, age 5 enrolment, Cambridge course materials and Danushka Clarke leadership captions; ten examination cards; January/April/October course intakes; individual WhatsApp and email enquiries; eight supplied flyers/credentials with image-click lightbox viewing and equal image frames.
+
+Intakes are preparation-course intakes, not guaranteed exam dates. CB is described as computer-based, with local availability to be confirmed. Exam names include their current CEFR levels alongside familiar names.
+
+Check: open index.html, review all examination cards, open a flyer and use the arrows/Escape, try WhatsApp and email enquiries, and review on a phone. Existing contact form opens WhatsApp.
+
+Validation: all local homepage assets and section links resolve; ten cards and eight gallery items verified; no duplicate HTML IDs. Browser visual testing could not run because a browser download was unavailable in this environment.
+
+Official reference sources:
+https://www.cambridgeenglish.org/exams-and-tests/qualifications/
+https://www.cambridgeenglish.org/exams-and-tests/qualifications/young-learners/paper/starters/
+https://www.cambridgeenglish.org/exams-and-tests/qualifications/first/
+https://ielts.org/take-a-test/test-types
+https://www.britishcouncil.lk/exam/cambridge/which/tkt
